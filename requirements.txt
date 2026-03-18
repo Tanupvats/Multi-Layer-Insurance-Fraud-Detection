@@ -1,0 +1,7 @@
+ultralytics
+transformers
+torch
+torchvision
+opencv-python
+numpy
+pillow

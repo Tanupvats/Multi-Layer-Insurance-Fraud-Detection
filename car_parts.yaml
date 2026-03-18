@@ -1,0 +1,12 @@
+# Path setup
+path: ../datasets/car_parts  # dataset root dir
+train: images/train           # train images (relative to 'path')
+val: images/val               # val images (relative to 'path')
+
+# Classes
+names:
+  0: windshield
+  1: headlight
+  2: tire
+  3: door
+  4: license_plate

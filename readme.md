@@ -1,5 +1,5 @@
 
-# **AutoShield AI: Multi-Layer Insurance Fraud Detection (POC)**
+# **AutoShield AI: Multi-Layer Insurance Fraud Detection**
 
 ## **Overview**
 **AutoShield AI** is a sophisticated Computer Vision pipeline designed to detect insurance fraud in vehicle claims. Unlike traditional systems that rely on metadata, this system uses **Geometric Invariance** and **Deep Identity Embeddings** to detect sophisticated manipulations like image mirroring and "Double Dipping" (reusing the same vehicle for multiple claims).

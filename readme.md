@@ -10,9 +10,6 @@
 2.  **Layer 3 (Geometric Consistency):** Uses **SuperGlue (GNN)** to detect mirrored/inverted images by decoupling the car from its background.
 3.  **Layer 4 (Identity Verification):** Employs a **Siamese Network** focused on the windshield "fingerprint" to ensure vehicle uniqueness.
 
-
----
-
 ---
 ## System Architecture: Multi-Layer Fraud Guard
 The system is built on a Modular Inference Pipeline architecture. By decoupling the various detection layers, we ensure that the system is both computationally efficient (using "early exit" logic) and highly maintainable.
@@ -114,7 +111,9 @@ AutoShield AI is designed for **Explainable AI (XAI)**. Every fraud verdict gene
 * **`viz_bg_mirror.jpg`**: Shows green correspondence lines between flipped backgrounds.
 * **`viz_car_identity.jpg`**: Highlights the matching features in the windshield crops.
 
----
+**Tanup Vats**  
+Senior Data Scientist
+
 
 
 

@@ -1,7 +1,6 @@
 
 # **AutoShield AI: Multi-Layer Insurance Fraud Detection**
 
-## **Overview**
 **AutoShield AI** is a sophisticated Computer Vision pipeline designed to detect insurance fraud in vehicle claims. Unlike traditional systems that rely on metadata, this system uses **Geometric Invariance** and **Deep Identity Embeddings** to detect sophisticated manipulations like image mirroring and "Double Dipping" (reusing the same vehicle for multiple claims).
 
 ### **Multi-Layer Logic Gates**
@@ -111,8 +110,9 @@ AutoShield AI is designed for **Explainable AI (XAI)**. Every fraud verdict gene
 * **`viz_bg_mirror.jpg`**: Shows green correspondence lines between flipped backgrounds.
 * **`viz_car_identity.jpg`**: Highlights the matching features in the windshield crops.
 
+## Author
+
 **Tanup Vats**  
-Senior Data Scientist
 
 
 

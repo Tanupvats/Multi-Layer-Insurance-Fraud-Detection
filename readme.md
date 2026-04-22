@@ -96,7 +96,7 @@ Multi-Layer-Insurance-Fraud-Detection/
 ├── .dockerignore                          # keeps build context small
 ├── Dockerfile                             # multi-stage, non-root, healthcheck
 ├── docker-compose.yml                     # local stack with mounted weights/outputs
-├── car_parts.yaml                         # UNCHANGED — YOLO dataset config        
+├── car_parts.yaml                         # YOLO dataset config        
 ```
 
 ---

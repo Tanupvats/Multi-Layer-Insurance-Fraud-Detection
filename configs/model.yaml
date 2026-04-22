@@ -1,0 +1,44 @@
+
+
+pose:
+  input_size: 224
+  normalize_mean: [0.485, 0.456, 0.406]
+  normalize_std:  [0.229, 0.224, 0.225]
+  # IMPORTANT: must be sorted alphabetically — matches ImageFolder ordering
+  # used during training. Config loader will reject unsorted values.
+  classes: [BL, BR, BS, FL, FR, FS, LS, RS]
+
+siamese:
+  input_size: 224
+  normalize_mean: [0.485, 0.456, 0.406]
+  normalize_std:  [0.229, 0.224, 0.225]
+  # Calibrate on a labeled validation set. These are PLACEHOLDERS.
+  # >= fraud_threshold → FRAUD
+  # [review_threshold, fraud_threshold) → SUSPICIOUS (human review)
+  fraud_threshold: 0.92
+  review_threshold: 0.80
+  embed_dim: 128
+
+car_seg:
+  coco_car_class_id: 2     # COCO pretrained: 2 is "car"
+  mask_threshold: 0.5
+
+parts_seg:
+  windshield_class_id: 0   # in the CUSTOM-trained schema, not COCO
+  class_names:
+    0: windshield
+    1: headlight
+    2: tire
+    3: door
+    4: license_plate
+
+mirror:
+  superglue_model: "magic-leap-community/superglue_outdoor"
+  match_count_threshold: 80
+
+pipeline:
+  mirror_candidate_pose_pairs:
+    - [LS, RS]
+    - [FL, FR]
+    - [BL, BR]
+  min_pose_confidence: 0.50

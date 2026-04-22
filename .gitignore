@@ -1,0 +1,40 @@
+.env
+.env.*
+!.env.example
+
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.coverage
+
+.venv/
+venv/
+
+# Runtime artifacts
+outputs/
+audit.db
+audit.db-journal
+audit.db-wal
+audit.db-shm
+*.log
+
+# Model weights (large, not source)
+models/*.pt
+models/*.pth
+!models/README.md
+
+# Training runs
+runs/
+car_fraud_poc/
+
+# Datasets
+datasets/*
+!datasets/README.md
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

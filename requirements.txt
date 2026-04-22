@@ -1,7 +1,30 @@
-ultralytics
-transformers
-torch
-torchvision
-opencv-python
-numpy
-pillow
+# AutoShield dependencies.
+
+# --- Core ML ---------------------------------------------------------------
+torch>=2.1
+torchvision>=0.16
+ultralytics~=8.2
+transformers~=4.40
+
+# --- Image / math ---------------------------------------------------------
+numpy~=1.26
+opencv-python~=4.8
+pillow~=10.0
+
+# --- Config / schema ------------------------------------------------------
+pyyaml~=6.0
+pydantic~=2.5
+pydantic-settings~=2.1
+
+# --- API -----------------------------------------------------------------
+fastapi~=0.110
+uvicorn[standard]~=0.27
+python-multipart~=0.0.9
+
+# --- Training extras (phase 3) -------------------------------------------
+scikit-learn~=1.3
+tqdm~=4.66
+
+# --- Dev -----------------------------------------------------------------
+pytest~=8.0
+ruff~=0.6

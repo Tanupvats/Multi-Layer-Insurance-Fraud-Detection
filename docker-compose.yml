@@ -1,0 +1,36 @@
+
+
+services:
+  autoshield:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: autoshield:latest
+    container_name: autoshield-api
+    env_file: .env
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./models:/app/models:ro       # weights (rotate without rebuild)
+      - ./outputs:/app/outputs        # visualizations + uploaded bytes
+      - ./datasets:/app/datasets:ro   # optional — for training commands
+      - ./configs:/app/configs:ro
+      - ./audit.db:/app/audit.db      # persist audit log across restarts
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://127.0.0.1:8000/healthz"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+    restart: unless-stopped
+
+    # --- Uncomment for GPU hosts (requires nvidia-container-toolkit) ---
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: all
+    #           capabilities: [gpu]
+    # environment:
+    #   AUTOSHIELD_DEVICE: cuda

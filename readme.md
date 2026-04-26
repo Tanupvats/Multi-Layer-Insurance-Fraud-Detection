@@ -15,6 +15,15 @@ The system is built on a Modular Inference Pipeline architecture. By decoupling 
 
 [![System Design](Multi_layer_fraud_detection.png)]()
 
+## Demo
+
+### Left Side vs Right side compare
+
+[![Autoshield AI](Autoshield_AI_Demo.gif)]()
+
+### Left right corner Side vs Front Side
+
+[![Autoshield AI](Autoshield_AI_demo_windshield_match.gif)]()
 ---
 
 ## **1. Project Structure**

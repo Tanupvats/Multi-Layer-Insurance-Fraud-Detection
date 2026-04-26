@@ -150,7 +150,7 @@ python training/train_siamese.py
 
 ---
 
-## **4. Running the Inference Pipeline **
+## 4. Running the Inference Pipeline 
 
 It executes the **Decoupling Logic**—splitting the car from the background to detect Photoshop manipulations.
 

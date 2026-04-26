@@ -149,16 +149,13 @@ python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 
 # --- Train ---
-PYTHONPATH=. python training/train_pose.py          --data datasets/pose    --epochs 30
-PYTHONPATH=. python training/train_siamese.py       --data datasets/siamese --epochs 40 --p 8 --k 4
-PYTHONPATH=. python training/train_segmentation.py  --data car_parts.yaml   --epochs 100 --export-onnx
+python training/train_pose.py          --data datasets/pose    --epochs 30
+python training/train_siamese.py       --data datasets/siamese --epochs 40 --p 8 --k 4
+python training/train_segmentation.py  --data car_parts.yaml   --epochs 100 --export-onnx
 
-# --- Test ---
-pytest -v                  # run the full suite locally
-ruff check src api inference training tests
 
 # --- Inference (unchanged from phase 2) ---
-PYTHONPATH=. python inference/infer_pipeline.py --a a.jpg --b b.jpg --json
+python inference/infer_pipeline.py --a a.jpg --b b.jpg --json
 
 # --- Serve ---
 uvicorn api.main:app --host 0.0.0.0 --port 8000

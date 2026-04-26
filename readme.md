@@ -76,7 +76,6 @@ Multi-Layer-Insurance-Fraud-Detection/
 │        └── windshield_b.jpg               #   ...from image B
 ├── readme.md                              # project info
 ├── requirements.txt                       # flat deps (torch, fastapi, ultralytics, ...)
-├── pytest.ini                             # pytest rootdir + warning filters
 ├── .env.example                           # documented operational config
 ├── .gitignore                             # excludes .env, models/*.pt, outputs/, audit.db, ...
 ├── .dockerignore                          # keeps build context small

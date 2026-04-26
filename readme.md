@@ -62,11 +62,6 @@ Multi-Layer-Insurance-Fraud-Detection/
 │   ├── train_siamese.py                   # PK sampler + batch-hard triplet loss, identity-level val
 │   └── train_segmentation.py              # YOLO with AdamW defaults + ONNX export
 │
-│
-├── .github/
-│   └── workflows/
-│       └── ci.yml                         # ruff + pytest + docker build on push/PR
-│
 ├── models/                                # trained weights (gitignored)
 │   └── README.md                          # documents what goes here
 │

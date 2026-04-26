@@ -62,15 +62,6 @@ Multi-Layer-Insurance-Fraud-Detection/
 │   ├── train_siamese.py                   # PK sampler + batch-hard triplet loss, identity-level val
 │   └── train_segmentation.py              # YOLO with AdamW defaults + ONNX export
 │
-├── tests/                                 # pytest suite
-│   ├── __init__.py
-│   ├── conftest.py                        # generates synthetic fixture images (no committed PNGs)
-│   ├── test_schema.py                     # Pydantic models + roundtrip JSON
-│   ├── test_config.py                     # YAML loading + "pose classes sorted" validator
-│   ├── test_image_io.py                   # EXIF rotation, corrupt/missing files, hashing
-│   ├── test_pipeline_decisions.py         # pose-pair gate + verdict ladder (parametrized)
-│   ├── test_audit.py                      # SQLite round-trip, latest-wins, verdict filter, persistence
-│   └── test_training_utils.py             # batch-hard loss, EarlyStopper, cosine sim, verification
 │
 ├── .github/
 │   └── workflows/
